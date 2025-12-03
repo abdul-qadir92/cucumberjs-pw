@@ -1,0 +1,23 @@
+userName: 
+accessKey: 
+framework: playwright
+platforms:
+  - os: Windows
+    osVersion: 11
+    browserName: chrome
+    browserVersion: latest
+  - browserName: safari
+    osVersion: 18.6
+    deviceName: iPhone 16
+  - browserName: chrome
+    osVersion: 12.0
+    deviceName: Samsung Galaxy S22 Ultra
+browserstackLocal: true
+buildName: bstack-demo
+projectName: Cucumber JS PW
+CUSTOM_TAG_1: "smoke"
+# Use CUSTOM_TAG_<N> and set more build tags as you need.
+debug: true
+consoleLogs: info
+browserstackAutomation: true
+parallelsPerPlatform: 5

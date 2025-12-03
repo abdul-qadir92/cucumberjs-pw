@@ -1,0 +1,59 @@
+{
+  "name": "cucumberjs-pw",
+  "version": "1.0.0",
+  "description": "Cucumber.js with Playwright testing framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js",
+    "test:headed": "HEADED=true cucumber-js",
+    "test:tag": "cucumber-js --tags",
+    "test:example": "HEADED=true cucumber-js --tags @example-tests",
+    "test:all-features": "HEADED=true cucumber-js --tags @all-features --parallel 5",
+    "test:smoke": "HEADED=true cucumber-js --tags @smoke",
+    "test:regression": "HEADED=true cucumber-js --tags @regression",
+    "test:content": "HEADED=true cucumber-js --tags @content-verification",
+    "test:title": "HEADED=true cucumber-js --tags @title-verification",
+    "test:heading": "HEADED=true cucumber-js --tags @heading-verification",
+    "test:link": "HEADED=true cucumber-js --tags @link-verification",
+    "test:parallel": "HEADED=true cucumber-js --parallel 3",
+    "test:debug": "DEBUG=* cucumber-js",
+    "test:browserstack": "npx browserstack-node-sdk cucumber-js",
+    "test:browserstack:example": "npx browserstack-node-sdk cucumber-js --tags @example-tests",
+    "test:browserstack:all-features": "npx browserstack-node-sdk cucumber-js --tags @all-features",
+    "test:browserstack:smoke": "npx browserstack-node-sdk cucumber-js --tags @smoke",
+    "test:browserstack:regression": "npx browserstack-node-sdk cucumber-js --tags @regression",
+    "test:browserstack:content": "npx browserstack-node-sdk cucumber-js --tags @content-verification",
+    "test:browserstack:title": "npx browserstack-node-sdk cucumber-js --tags @title-verification",
+    "test:browserstack:heading": "npx browserstack-node-sdk cucumber-js --tags @heading-verification",
+    "test:browserstack:link": "npx browserstack-node-sdk cucumber-js --tags @link-verification",
+    "test:browserstack:parallel": "npx browserstack-node-sdk cucumber-js --parallel 3",
+    "report": "allure generate reports/allure-results --clean -o reports/allure-report && allure open reports/allure-report",
+    "report:generate": "allure generate reports/allure-results --clean -o reports/allure-report",
+    "report:open": "allure open reports/allure-report",
+    "install:browsers": "playwright install",
+    "install:chromium": "playwright install chromium"
+  },
+  "keywords": [
+    "cucumber",
+    "playwright",
+    "bdd",
+    "testing"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@cucumber/cucumber": "^12.1.0",
+    "@faker-js/faker": "^10.0.0",
+    "@playwright/test": "1.56.1",
+    "@types/node": "^24.1.0",
+    "allure-commandline": "^2.34.1",
+    "allure-cucumberjs": "^3.3.3",
+    "allure-playwright": "^3.3.3",
+    "browserstack-node-sdk": "^1.46.2",
+    "playwright": "1.56.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0"
+  }
+}
+
