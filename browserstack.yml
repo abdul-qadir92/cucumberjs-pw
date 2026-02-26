@@ -1,23 +1,32 @@
 userName: 
 accessKey: 
 framework: playwright
+parallelsPerPlatform: 2
 platforms:
-  - os: Windows
-    osVersion: 11
+  - os: OS X
+    osVersion: Monterey
     browserName: chrome
     browserVersion: latest
-  - browserName: safari
-    osVersion: 18.6
-    deviceName: iPhone 16
-  - browserName: chrome
-    osVersion: 12.0
-    deviceName: Samsung Galaxy S22 Ultra
-browserstackLocal: true
+    accessibility: false
+browserstackLocal: false
 buildName: bstack-demo
 projectName: Cucumber JS PW
-CUSTOM_TAG_1: "smoke"
+CUSTOM_TAG_1: "sanity"
 # Use CUSTOM_TAG_<N> and set more build tags as you need.
 debug: true
 consoleLogs: info
+networkLogs: true
+interactiveDebugging: true
+#browserProfiling: true
+
 browserstackAutomation: true
-parallelsPerPlatform: 5
+
+browserstack.selfHeal: true
+percy: true
+accessibility: true
+accessibilityOptions:
+    wcagVersion: wcag21aaa # Default: wcag21aa
+    includeIssueType: 
+        bestPractice: true # Default: false
+        needsReview: true # Default: true
+        experimental: true # Default: true

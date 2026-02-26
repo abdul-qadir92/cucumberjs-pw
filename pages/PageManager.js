@@ -1,4 +1,5 @@
 const ExamplePage = require('./ExamplePage');
+const SelfHealDemoPage = require('./SelfHealDemoPage');
 const browserContext = require('../features/support/browser_context');
 
 /**
@@ -27,6 +28,9 @@ class PageManager {
         case 'example':
           this.pages[pageName] = new ExamplePage(page);
           break;
+        case 'selfhealdemo':
+          this.pages[pageName] = new SelfHealDemoPage(page);
+          break;
         default:
           throw new Error(`Page object "${pageName}" is not defined.`);
       }
@@ -48,6 +52,10 @@ class PageManager {
    */
   getExamplePage() {
     return this.getPage('example');
+  }
+
+  getSelfHealDemoPage() {
+    return this.getPage('selfhealdemo');
   }
 }
 

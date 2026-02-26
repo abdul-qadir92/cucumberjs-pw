@@ -13,7 +13,15 @@ module.exports = defineConfig({
   projects: [
     {
       name: 'chromium',
+      testIgnore: /api\//,
       use: { ...devices['Desktop Chrome'] },
+    },
+    {
+      name: 'api',
+      testMatch: /.*api\.spec\.js/,
+      use: {
+        baseURL: 'https://jsonplaceholder.typicode.com',
+      },
     },
   ],
 });
