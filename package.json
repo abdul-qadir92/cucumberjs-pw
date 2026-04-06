@@ -53,7 +53,7 @@
     "allure-commandline": "^2.34.1",
     "allure-cucumberjs": "^3.3.3",
     "allure-playwright": "^3.3.3",
-    "browserstack-node-sdk": "^1.49.12",
+    "browserstack-node-sdk": "^1.50.10",
     "playwright": "1.56.1"
   },
   "devDependencies": {

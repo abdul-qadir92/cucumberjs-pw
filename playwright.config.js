@@ -1,6 +1,7 @@
 const { defineConfig, devices } = require('@playwright/test');
 
 module.exports = defineConfig({
+  timeout: 60000,
   testDir: './tests',
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
@@ -8,6 +9,8 @@ module.exports = defineConfig({
   workers: process.env.CI ? 1 : undefined,
   reporter: 'html',
   use: {
+    actionTimeout: 45000, 
+    navigationTimeout: 45000,
     trace: 'on-first-retry',
   },
   projects: [

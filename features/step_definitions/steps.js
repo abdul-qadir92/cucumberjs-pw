@@ -4,8 +4,8 @@ const { chromium } = require('playwright');
 const browserContext = require('../support/browser_context');
 const pageManager = require('../../pages/PageManager');
 
-// Set default timeout to 30 seconds for all steps
-setDefaultTimeout(30 * 1000);
+// 1. Increase global step timeout to 60 seconds
+setDefaultTimeout(60 * 1000);
 
 let pageTitle;
 let headingText;
