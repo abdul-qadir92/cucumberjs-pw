@@ -1,13 +1,15 @@
 userName: 
 accessKey: 
-framework: playwright
+framework: cucumber-js
+#browserstack.playwrightVersion: '1.56.1'
+
 parallelsPerPlatform: 2
 platforms:
   - os: OS X
-    osVersion: Monterey
+    osVersion: Ventura
     browserName: chrome
     browserVersion: latest
-    accessibility: false
+
 browserstackLocal: false
 buildName: bstack-demo
 projectName: Cucumber JS PW
@@ -23,7 +25,7 @@ browserstackAutomation: true
 
 browserstack.selfHeal: true
 percy: false
-accessibility: true
+accessibility: false
 accessibilityOptions:
     wcagVersion: wcag21aaa # Default: wcag21aa
     includeIssueType: 

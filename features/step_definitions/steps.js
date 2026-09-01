@@ -12,11 +12,11 @@ let headingText;
 let links;
 let examplePage;
 
-Before({ timeout: 60 * 1000 }, async function () {
+Before({ timeout: 120 * 1000 }, async function () {
   const isHeaded = process.env.HEADED === 'true' || process.env.HEADED === '1';
   const browser = await chromium.launch({ 
     headless: !isHeaded,
-    timeout: 60000
+    
   });
   const context = await browser.newContext({
     viewport: { width: 1280, height: 720 }

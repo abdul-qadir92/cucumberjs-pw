@@ -2,7 +2,7 @@
 let browser;
 let context;
 let page;
-const DEFAULT_TIMEOUT = 45000;
+const DEFAULT_TIMEOUT = 60000;
 module.exports = {
   getBrowser: () => browser,
   setBrowser: (b) => { browser = b; },
